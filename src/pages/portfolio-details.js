@@ -41,14 +41,16 @@ const WorkSingle = () => {
                     max-width: 750px;
                   `}
                 >
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses. And by introducing these
-                  illustrative elements to the logomark, Strictly found it’s
-                  voice.
+                  TrashTalk is a chatbot that gives a user advice on where to dispose of their 
+                  waste. It provides educated & educational responses that not only give you an 
+                  immediate answer but also enough information to learn why. And, it's self-aware. 
+                  On the site itself, you can explore resources, classification charts, and more!
                 </Text>
+                <Text variant="h3"
+                >Technologies: Node.js, React.js, Google Dialogflow
+                </Text>
+                <Text>Link: https://devpost.com/software/trashtalk-cbq3rz 
+</Text>
               </Col>
             </Row>
           </Container>
