@@ -3,9 +3,16 @@ import { Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 
 import { Section, Button, Title, Text, Box } from "../components/Core";
+import YouTubePlayer from "react-player/youtube";
 import PageWrapper from "../components/PageWrapper";
 import Contact from "../sections/common/Contact";
 import imgWorkCover from "../assets/image/jpg/details/details-1.jpg";
+import trashTalkImg from "../assets/image/png/TrashTalkImage.png";
+import PlanIt1 from "../assets/image/png/PlanIt1.jpg";
+import PlanIt2 from "../assets/image/png/PlanIt2.jpg";
+import AggreVision from "../assets/image/png/AggreVision.png"
+import Dashboard from "../assets/image/png/Dashboard.png"
+import Dashboard2 from "../assets/image/png/Dashboard2.png"
 import imgS1 from "../assets/image/jpg/details/details-6.jpg";
 import imgS2 from "../assets/image/jpg/details/details-5.jpg";
 import imgS3 from "../assets/image/jpg/details/details-4.jpg";
@@ -13,6 +20,8 @@ import imgS4 from "../assets/image/jpg/details/details-3.jpg";
 import imgS5 from "../assets/image/jpg/details/details-8.jpg";
 import imgS6 from "../assets/image/jpg/details/details-7.jpg";
 import { device } from "../utils";
+import ProjectDetails from "../components/ProjectDetails";
+// import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
 
 const WorkSingle = () => {
   return (
@@ -49,148 +58,146 @@ const WorkSingle = () => {
                 <Text variant="h3"
                 >Technologies: Node.js, React.js, Google Dialogflow
                 </Text>
-                <Text>Link: https://devpost.com/software/trashtalk-cbq3rz 
-</Text>
+                <a href="https://devpost.com/software/trashtalk-cbq3rz" target="_blank"> Link to DevPost 
+                </a>
+                <br></br>
+                <a href="https://ashnakhetan.github.io/trashtalk/" target="_blank"> Link to Web App 
+                </a>
+              </Col>
+              <Col>
+              <img src={trashTalkImg} width={300}></img>
               </Col>
             </Row>
           </Container>
         </Section>
-        <div className="mt-lg-3">
+        
+        <Section id="section-1" className="mt-lg-5">
           <Container>
             <Row>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Client</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Shopper
+              <Col>
+              {/* <img src={trashTalkImg} width={300}></img> */}
+              <YouTubePlayer url="https://www.youtube.com/watch?v=jizdJsr8PCw"></YouTubePlayer>
+              </Col>
+              <Col >
+                <Text variant="tag">OBJECT-RECOGNITION</Text>
+                <Title variant="secSm" className="my-4">
+                  PlastiClass{" "}
                 </Title>
-              </Col>
-              <Col lg="4" className="mb-4 mb-lg-0">
-                <Text variant="tag">Time</Text>
-                <Title variant="cardBig" className="mt-3">
-                  Apr 14, 2020
-                </Title>
-              </Col>
-              <Col lg="4">
-                <Button arrowRight>Try It Out</Button>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <Section className="mt-lg-5">
-          <Container>
-            <Row>
-              <Col xs="12" className="mb-5">
-                <img src={imgS1} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col xs="12" className="mb-5">
-                <img src={imgS2} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="mb-5 mb-lg-0 pr-lg-4">
-                <img src={imgS3} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col lg="6" className="pl-lg-4">
-                <img src={imgS4} alt="" className="img-fluid w-100" />
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <Section className="pt-4 pb-0">
-          <Container>
-            <Title variant="secSm" className="mb-5 pb-lg-4">
-              Key Findings
-            </Title>
-            <Row>
-              <Col lg="6" className="mb-5 pr-lg-5">
-                <Title variant="cardBig" className="mb-4">
-                  01. Basics
-                </Title>
-                <Text variant="p">
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses.
-                </Text>
-              </Col>
-              <Col lg="6" className="mb-5 pl-lg-5">
-                <Title variant="cardBig" className="mb-4">
-                  02. Goals
-                </Title>
-                <Text variant="p">
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard.
-                </Text>
-              </Col>
-              <Col lg="6" className="mb-5 pr-lg-5">
-                <Title variant="cardBig" className="mb-4">
-                  03. Problems
-                </Title>
-                <Text variant="p">
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses.
-                </Text>
-              </Col>
-              <Col lg="6" className="mb-5 pl-lg-5">
-                <Title variant="cardBig" className="mb-4">
-                  04. Solutions
-                </Title>
-                <Text variant="p">
-                  To satisfy our goal of creating a brand that could adapt
-                  across many use cases, we took the base form of their new logo
-                  and used it as an artboard. As long as the structural outline
-                  of the mark stayed consistent their brand was allowed to flex
-                  and adapt to specific uses.
-                </Text>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
-        <Section mt="22%" bg="dark">
-          <Container>
-            <Row
-              css={`
-                margin-top: -40%;
-              `}
-            >
-              <Col xs="12" className="mb-5">
-                <img src={imgS5} alt="" className="img-fluid w-100" />
-              </Col>
-              <Col xs="12" className="mb-5">
-                <img src={imgS6} alt="" className="img-fluid w-100" />
-              </Col>
-            </Row>
-
-            <div className="text-center mt-lg-5">
-              <Text variant="tag" className="mb-1" color="lightShade">
-                Next Project
-              </Text>
-              <Link to="portfolio-details">
-                <Button
-                  arrowRight
-                  className="border-0 bg-transparent shadow-none text-capitalize py-3"
+                <Text
+                  variant="p"
                   css={`
-                    font-weight: 700
-                    font-size: 1.5rem;
-                    letter-spacing: -1.2px;
-                    line-height: 1.375;
-                    @media ${device.md} {
-                      font-size: 2rem;
-                    }
-                `}
+                    max-width: 750px;
+                  `}
                 >
-                  Replace
-                </Button>
-              </Link>
-            </div>
+                  An object-recognition web app that classifies any items you hold in front of the camera into 8 different categories of plastic. It then provides you with an educated answer as to where it can be recycled, if recyclable!
+                </Text>
+                <Text variant="h3"
+                >Technologies: React.js, ML5, HTML
+                </Text>
+                <a href="https://devpost.com/software/plasticlass-gidasn" target="_blank"> Link to DevPost 
+                </a>
+                <br></br>
+                <a href="https://ashnakhetan.github.io/plasticlass/" target="_blank"> Link to Web App 
+                </a>
+              </Col>
+            </Row>
           </Container>
         </Section>
-        <Box py={4}>
-          <Contact />
-        </Box>
+
+        <Section id="section-2" className="mt-lg-5">
+          <Container>
+            <Row>
+              <Col>
+              <img src={PlanIt1} width={200}></img>
+              </Col>
+              <Col class="px-0">
+              <img src={PlanIt2} width={200}></img>
+              </Col>
+              <Col>
+                <Text variant="tag">MOBILE</Text>
+                <Title variant="secSm" className="my-4">
+                  PlanItStudent{" "}
+                </Title>
+                <Text
+                  variant="p"
+                  css={`
+                    max-width: 750px;
+                  `}
+                >
+Time management— we all struggle with it. All we need is something to hold us accountable for the time it should take to complete our tasks… and something that helps us realize when we're spending more.
+Planit Student doesn't just organize your day… it creates good habits and teaches time accountability… so that one day, you won't need the app any longer.</Text>
+                <Text variant="h3"
+                >Technologies: React Native, Google Firebase
+                </Text>
+                <a href="https://planitapp2020.wordpress.com/" target="_blank"> Link to Site 
+                </a>
+              </Col>
+            </Row>
+          </Container>
+        </Section>
+
+        <Section id="section-3" className="mt-lg-5">
+          <Container>
+            <Row>
+              <Col>
+              <img src={AggreVision} width={400}></img>
+              </Col>
+              <Col >
+                <Text variant="tag">EMOTION-DETECTION</Text>
+                <Title variant="secSm" className="my-4">
+                AggreVision- Affectiva EMPath Intern 2020{" "}
+                </Title>
+                <Text
+                  variant="p"
+                  css={`
+                    max-width: 750px;
+                  `}
+                >
+Through surveys, we found that aggression comes in three forms: anger, surprise, and fear, all three of which can cause aggressive driving. Our product uses computer vision to detect those aggressive expressions in a driver's face and immediately stops the driver from acting on their destructive emotion.
+</Text>
+                <Text variant="h3"
+                >Technologies: PyTorch, CNNs, OpenCV
+                </Text>
+              </Col>
+            </Row>
+          </Container>
+        </Section>
+
+        <Section id="section-4" className="mt-lg-5">
+          <Container>
+            <Row>
+              <Col >
+                <Text variant="tag">EMOTION-DETECTION</Text>
+                <Title variant="secSm" className="my-4">
+                Traffic Control Dashboard for Connected Vehicles{" "}
+                </Title>
+                <Text
+                  variant="p"
+                  css={`
+                    max-width: 750px;
+                  `}
+                >
+(University of Michigan Next-Gen Mobility Systems Lab 2020):
+Anticipating a future of connected cars, I was tasked with implementing a dashboard for Traffic Control Centers to visualize the aggression of cars approaching intersections through a real-time animated map and 3D bar graphs. In addition, due to the inaccuracies of GPS technologies, I derived a coordinate-correcting algorithm to adjust cars into lanes.</Text>
+                <Text variant="h3"
+                >Technologies: Javascript, Python, MatPlotLib, Dash
+                </Text>
+              </Col>
+              <Col>
+              <Row><img src={Dashboard} width={550}></img></Row>
+              <Row><img src={Dashboard2} width={550}></img></Row>
+              </Col>
+            </Row>
+          </Container>
+        </Section>
+
+        <Section id="section-5">
+          <Container>
+            <Row>
+              <h2>Other projects available on my <span><a href="https://devpost.com/ashnakhetan">Devpost</a></span> or <span><a href="https://github.com/ashnakhetan/" >Github</a></span>. Check them out!</h2>
+            </Row>
+          </Container>
+        </Section>
       </PageWrapper>
     </>
   );

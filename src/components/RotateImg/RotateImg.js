@@ -34,7 +34,7 @@ const RotateImg = ({ link = "/", imgSrc, imgWidth="100px", ...rest }) => {
         <BoxStyled {...rest}>
          <Link to={link} className="d-block">
            <img src={imgSrc} width={imgWidth} alt="" className="w-100"/>
-           {isHovering && <h2>Description Here</h2>}
+           {/* {isHovering && <h2>Description Here</h2>} */}
          </Link>
        </BoxStyled>
         </div>

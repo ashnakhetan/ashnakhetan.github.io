@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { Link } from "react-scroll";
 import RotateImg from "../../components/RotateImg";
 
 import { Title, Section, Box, Button } from "../../components/Core";
+// import GlobalContext from "src/context/GlobalContext.js";
 
 import bgHeroPattern from "../../assets/image/webp/hero-pattern-2.webp";
 import profPic from "../../assets/image/jpg/ProfilePic.jpg";
@@ -23,6 +24,7 @@ const SectionStyled = styled(Section)`
 `;
 
 const Hero = () => {
+  // const gContext = useContext(GlobalContext);
   return (
     <>
       {/* <!-- Hero Area --> */}
@@ -65,7 +67,29 @@ const Hero = () => {
                 <Button variant="success" arrowRight>
                   Explore projects
                 </Button>
+                
               </Link>
+                    {/* <Button
+                      className="nav-link"
+                      href="/#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        gContext.toggleAbout();
+                      }}
+                    >
+                      Learn about me
+                    </Button> */}
+              {/* <Link
+                href="/#"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={1000}
+              >
+                <Button variant="success" arrowRight>
+                  Learn about me
+                </Button>
+                </Link> */}
             </Box>
           </Box>
         </Container>

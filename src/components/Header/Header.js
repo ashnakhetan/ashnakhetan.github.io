@@ -443,7 +443,7 @@ const Header = ({ isDark }) => {
                         gContext.toggleAbout();
                       }}
                     >
-                      about me.
+                      about me
                     </a>
                   </li>
 

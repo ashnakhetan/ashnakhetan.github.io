@@ -61,15 +61,6 @@ const About = ({ hero = true, bg = "dark", ...rest }) => {
                     </a>
                   </Text>
                 </div>
-                {/* <div className="mt-5">
-                  <img src={imgSignLight} alt="sign" className="img-fluid" />
-                </div> */}
-                {/* <Text color="light" className="mt-3 font-weight-bold">
-                  Bruce Ryan
-                </Text> */}
-                {/* <Text color="light" variant="small">
-                  Founder of Folio Digital
-                </Text> */}
                 <div className="mt-5 d-flex">
                   <LinkSocial
                     href="https://www.linkedin.com/in/ashna-khetan/"

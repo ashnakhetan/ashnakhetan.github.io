@@ -207,7 +207,7 @@ const NestedMenu = ({ menuItems = defaultMenuItems }) => {
                 }
               }}
             >
-              about me.
+              about me
             </a>
           }
         </ListGroup.Item>
