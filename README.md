@@ -1,9 +1,4 @@
 # Ashna Khetan's Portfolio
-In-progress; not deployed yet!
+A portfolio about me and my past projects :)
 
-## To Run:
-If you really want to see it now...
-you can run it by downloading it, then run:
-
-- npm install
-- yarn develop (or npm start)
+Deployed! Can view @ https://ashnakhetan.github.io/portfolio22/
