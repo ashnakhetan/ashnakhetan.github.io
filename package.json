@@ -3,6 +3,7 @@
   "description": "Learn more about Ashna and her past projects!",
   "version": "1.0.0",
   "author": "ashna-khetan",
+  "homepage": "https://ashnakhetan.github.io/portfolio22/",
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "aos": "^3.0.0-beta.6",
@@ -18,6 +19,7 @@
     "gatsby-source-filesystem": "^2.1.38",
     "gatsby-transformer-remark": "^2.6.49",
     "gatsby-transformer-sharp": "^2.3.13",
+    "gh-pages": "^4.0.0",
     "google-map-react": "^1.1.7",
     "lodash": "^4.17.15",
     "polished": "^3.4.2",
@@ -29,11 +31,11 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.8.0",
     "react-masonry-component": "^6.2.1",
-    "remark-mdx": "^2.0.0-next.9",
     "react-player": "^2.0.1",
     "react-scroll": "^1.8.1",
     "react-select": "^3.1.0",
     "react-slick": "^0.25.2",
+    "remark-mdx": "^2.0.0-next.9",
     "sass": "^1.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1",
@@ -50,7 +52,9 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b main -d build"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
