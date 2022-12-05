@@ -1,7 +1,7 @@
 export const menuItems = [
   { 
     name: "", 
-    label: "main page" 
+    label: "Home" 
   },
   // {
   //   name: "demos",
@@ -19,7 +19,7 @@ export const menuItems = [
   // },
   {
     name: "portfolio-details", 
-    label: "view projects"
+    label: "Projects"
   }
   // {
   //   name: "pages",

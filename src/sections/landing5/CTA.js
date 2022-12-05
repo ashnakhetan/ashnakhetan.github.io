@@ -32,7 +32,7 @@ const Hero = () => {
                   Please reach out with any questions or ideas! I love to talk tech.
                 </Title>
               </div>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <ButtonIcon
                   onClick={(e) => {
                     e.preventDefault();
@@ -41,7 +41,7 @@ const Hero = () => {
                 >
                   Contact me
                 </ButtonIcon>
-              </div>
+              </div> */}
             </Col>
           </Row>
         </Container>

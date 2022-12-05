@@ -51,28 +51,28 @@ const SectionSm = styled(SectionTitle)`
 
 const HeroTitle = styled(SectionTitle)`
   letter-spacing: -2.81px;
-  font-size: 50px;
-  line-height: 56px;
+  font-size: 30px;
+  line-height: 36px;
 
   @media ${device.sm} {
-    font-size: 66px;
-    line-height: 70px;
+    font-size: 26px;
+    line-height: 50px;
   }
 
   @media ${device.lg} {
-    font-size: 76px;
-    line-height: 84px;
+    font-size: 56px;
+    line-height: 64px;
   }
 
   @media ${device.xl} {
-    font-size: 80px;
-    line-height: 84px;
+    font-size: 60px;
+    line-height: 64px;
   }
 `;
 
 const CardTitle = styled.h4`
   font-size: 1.3125rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.5px;
   line-height: 1;
   ${color};
