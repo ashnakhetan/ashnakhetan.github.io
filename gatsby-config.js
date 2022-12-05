@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-  ],
-  pathPrefix: "/portfolio22",
+  ]
+  // ,
+  // pathPrefix: "/portfolio22",
 };

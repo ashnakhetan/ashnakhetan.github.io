@@ -3,7 +3,7 @@
   "description": "Learn more about Ashna and her past projects!",
   "version": "1.0.0",
   "author": "ashna-khetan",
-  "homepage": "https://ashnakhetan.github.io/portfolio22/",
+  "homepage": "https://ashnakhetan.github.io/",
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "aos": "^3.0.0-beta.6",

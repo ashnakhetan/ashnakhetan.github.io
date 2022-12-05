@@ -14,7 +14,7 @@ import profPic from "../../assets/image/jpg/ProfilePic.jpg";
 const SectionStyled = styled(Section)`
   &::before {
     position: absolute;
-    top: -40px;
+    // top: -40px;
     content: "";
     width: 100%;
     height: 100%;
@@ -35,7 +35,7 @@ const Hero = () => {
             pb={["40px", null, "60px", "25px"]}
           >
             <Box className="d-flex flex-column align-items-center text-center">
-              <img src={profPic} width={300}/>
+              <img src={profPic} width={180}/>
               {/* <RotateImg imgSrc={profPic} imgWidth={100}/> */}
               {/* width={100} */}
               <Box

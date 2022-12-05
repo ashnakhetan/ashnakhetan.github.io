@@ -114,7 +114,7 @@ const Layout = ({ children, pageContext }) => {
         <GlobalStyle />
         <Helmet>
           <title>Ashna Khetan</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
+          {/* <link rel="icon" type="image/png" href={imgFavicon} /> */}
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">
@@ -141,7 +141,7 @@ const Layout = ({ children, pageContext }) => {
         <GlobalStyle />
         <Helmet>
           <title>Ashna Khetan</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
+          {/* <link rel="icon" type="image/png" href={imgFavicon} /> */}
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">

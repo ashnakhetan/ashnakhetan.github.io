@@ -18,6 +18,19 @@ const SectionStyled = styled(Section)`
   }
 `;
 
+const LinkSocial = styled.a`
+  color: ${({ theme }) => theme.colors.light} !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1.63px;
+  transition: 0.4s;
+  &:hover {
+    color: ${({ theme }) => theme.colors.light} !important;
+    transform: translateY(-5px);
+  }
+`;
+
 const Hero = () => {
   const gContext = useContext(GlobalContext);
 
@@ -31,6 +44,23 @@ const Hero = () => {
                 <Title color="light" variant="secSm">
                   Please reach out with any questions or ideas! I love to talk tech.
                 </Title>
+                <br></br>
+                <LinkSocial
+                    href="https://www.linkedin.com/in/ashna-khetan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-3"
+                  >
+                    LinkedIn
+                  </LinkSocial>
+                  <LinkSocial
+                    href="mailto:ashnak@stanford.edu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-3"
+                  >
+                    ashnak@stanford.edu
+                  </LinkSocial>
               </div>
               {/* <div className="text-center">
                 <ButtonIcon

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button} from "react-bootstrap";
 import Masonry from "react-masonry-component";
 
 import {
@@ -9,7 +9,7 @@ import {
   Section,
   Box,
   Text,
-  ButtonOutline,
+  ButtonOutline
 } from "../../components/Core";
 import RotateImg from "../../components/RotateImg";
 import { agencyWorks1 } from "../../data";
@@ -74,9 +74,21 @@ const Works = () => {
             ))}
           </Grid>
           <Box pt="3rem" className="text-center">
-            <ButtonOutline color="light" borderColor="lightShade">
-              Load more works
-            </ButtonOutline>
+            {/* <Button variant="primary" href="/portfolio-details" color="light" borderColor="lightShade">
+              See all Projects
+            </Button> */}
+            <Link
+                to="/portfolio-details"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={1000}
+              >
+                <Button variant="primary" arrowRight>
+                  See all Projects
+                </Button>
+                
+              </Link>
           </Box>
         </Container>
       </Section>
