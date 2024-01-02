@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Default Stuff */
+.App {
+  text-align: center;
+  background-color: #FAF9F6;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Stuff */
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  width: '100%';
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.navButtons, .contactButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  color: #2d1717;
+  padding: 10px 20px;
+}
+
+button:hover {
+  color: #005582; /* Change color on hover for visual feedback */
+}
+
+.linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  /* margin-left: 15px; */
+  margin: 10px;
+  cursor: pointer;
+}
+
+.email-button {
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.email-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;  
+  padding-right: 20px;
+  margin-right: 10px;
+}
+
+.popup {
+  background-color: rgba(255,255,255,0.75);
+  position: fixed;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+  color: black;
+  font-size: small;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  opacity: 0; /* initially hidden */
+  transition: opacity 1s ease-in-out;
+}
+
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10%, 90% { opacity: 1; } /* Fade in and stay visible */
+  100% { opacity: 0; } /* Fade out */
+}
+
+.popup.fade-in {
+  animation: fadeInOut 2s forwards; /* Total duration 3s */
+}
+
+
+/* Section 1 styling */
+
+.section {
+  height: calc(100vh - 90px); /* Subtract the header height from the viewport height */
+}
+
+.intro_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  background-color: #fbf7f5;
+}
+
+.left_side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+  margin: 30px;
+  margin-top: 10px;
+  margin-left: 60px;
+  background-color: #FAF9F6;
+}
+
+.profile_pic {
+  width: 200px;
+  border-radius: 20%;
+  /* border: 2px solid #005582; */
+  margin-bottom: 50px;
+  transform: 'rotate(90deg)';
+}
+
+.right_side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.teach {
+  color: blue;
+  text-decoration: none;
+}
+.nlp {
+  color: #8a00cf;
+  text-decoration: none;
+}
+.cssg {
+  color: hsl(181, 100%, 23%);
+  text-decoration: none;
+}
+.dance {
+  color: maroon;
+  text-decoration: none;
+}
+
+/* Section 2 styling */
+.projects {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* height: 100vh; */
+  /* padding-top: 20px; */
+  padding-left: 60px;
+  padding-right: 60px;
+  /* flex-wrap: 'wrap'; */
+  justify-content: 'center';
+  /* margin: 50px; */
+  /* align-items: 'flex-start'; */
+  /* gap: 30px; */
+}
+
+/* Section 3 Styling */
+
+.experience {
+  margin: 20px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  font-size: smaller;
+  margin-bottom: 10px;
+  text-align: center;
+  color: gray;
+  background-color: #FAF9F6;
+}

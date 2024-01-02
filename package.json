@@ -1,62 +1,45 @@
 {
   "name": "ashna-khetan-portfolio",
-  "description": "Learn more about Ashna and her past projects!",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "private": true,
   "author": "ashna-khetan",
   "homepage": "https://ashnakhetan.github.io/",
   "dependencies": {
-    "@n8tb1t/use-scroll-position": "^1.0.43",
-    "aos": "^3.0.0-beta.6",
-    "babel-plugin-styled-components": "^1.10.6",
-    "bootstrap": "^4.3.1",
-    "dotenv": "^8.1.0",
-    "gatsby": "^2.15.30",
-    "gatsby-image": "^2.2.39",
-    "gatsby-plugin-react-helmet": "^3.1.10",
-    "gatsby-plugin-sass": "^2.1.17",
-    "gatsby-plugin-sharp": "^2.4.4",
-    "gatsby-plugin-styled-components": "^3.1.13",
-    "gatsby-source-filesystem": "^2.1.38",
-    "gatsby-transformer-remark": "^2.6.49",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "gh-pages": "^4.0.0",
-    "google-map-react": "^1.1.7",
-    "lodash": "^4.17.15",
-    "polished": "^3.4.2",
-    "react": "^16.10.2",
-    "react-bootstrap": "^1.0.0-beta.15",
-    "react-countdown": "^2.2.1",
-    "react-dom": "^16.10.2",
-    "react-headroom": "^3.0.0",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^3.8.0",
-    "react-masonry-component": "^6.2.1",
-    "react-player": "^2.0.1",
-    "react-scroll": "^1.8.1",
-    "react-select": "^3.1.0",
-    "react-slick": "^0.25.2",
-    "remark-mdx": "^2.0.0-next.9",
-    "sass": "^1.29.0",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^4.4.1",
-    "styled-system": "^5.1.5"
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
   "scripts": {
-    "start": "yarn develop",
-    "build": "gatsby clean && gatsby build",
-    "clean": "gatsby clean",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "predeploy": "yarn run build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },  
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "devDependencies": {
-    "prettier": "^1.17.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
