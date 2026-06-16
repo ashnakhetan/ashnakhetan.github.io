@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "ashna-khetan",
-  "homepage": "https://ashnakhetan.github.io/",
+  "homepage": "https://ashna.me/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
