@@ -1,59 +1,73 @@
 import React from "react";
-import profilePhoto from "../assets/profile2.png";
+import profilePhoto from "../assets/profile-grad-crop.jpg";
 import QuestionCard from "../components/Question";
 
 const Intro = () => {
   return (
     <div className="intro_section">
-      <div className="left_side">
+      <div className="hero-copy">
         <h1 className="intro">Hi, I'm Ashna.</h1>
-        <img
-          className="profile_pic"
-          src={profilePhoto}
-          alt="photo of me at Grace Hopper Celebration next to a Mickey Mouse statue!"
-        ></img>
-      </div>
-      <div className="right_side" style={{ marginRight: "40px" }}>
-        <p className="intro">
-          I enjoy building things for others to enjoy. I'm a computer science ai
-          bs & ms student @ Stanford. I also{" "}
+        <p className="hero-lede">
+          I make machines smarter so I don't have to be. Just graduated from
+          Stanford; now working on world models, robotics, and agents.
+        </p>
+        <div className="hero-links">
           <a
-            href="https://web.stanford.edu/class/cs106b/about_staff"
+            className="hero-link-world"
+            href="https://build.nvidia.com/nvidia/cosmos-predict1-7b"
             target="_blank"
-            className="teach"
+            rel="noreferrer"
           >
-            teach cs
+            world models
           </a>
-          , research{" "}
           <a
-            href="https://arxiv.org/abs/2311.09144"
+            className="hero-link-good"
+            href="https://cs4good.com/"
             target="_blank"
-            className="nlp"
+            rel="noreferrer"
           >
-            conversational nlp
+            social good
           </a>
-          , lead an effort to spread{" "}
-          <a href="https://cs4good.com/" target="_blank" className="cssg">
-            cs for social good
-          </a>
-          , and{" "}
           <a
+            className="hero-link-dance"
             href="https://basmatiraas.wixsite.com/stanford"
             target="_blank"
-            className="dance"
+            rel="noreferrer"
           >
             dance
           </a>
-          !<br />
-          <br />
-          I want to share some of my projects and experiences with you.
-          <br />
-          <br />
-          But first, answer this! (To view u a cool non-professional thing i've
-          done in the past).
-        </p>
-        <br></br>
-        <QuestionCard />
+          <a
+            className="hero-link-writing"
+            href="https://ashnak03.substack.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            writing
+          </a>
+        </div>
+      </div>
+      <div className="hero-media">
+        <div className="profile-frame">
+          <img
+            className="profile_pic"
+            src={profilePhoto}
+            alt="Ashna at graduation"
+          />
+          <div className="profile-caption">
+            <p>💭 currently musing about robot evals & agentic data collection</p>
+            <a
+              className="profile-caption-link"
+              href="https://x.com/ashna_khetan"
+              target="_blank"
+              rel="noreferrer"
+            >
+              let's talk
+            </a>
+          </div>
+        </div>
+        <div className="question-wrap">
+          <QuestionCard />
+        </div>
       </div>
     </div>
   );

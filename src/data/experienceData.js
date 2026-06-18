@@ -3,22 +3,35 @@
 const experienceData = {
   internships: [
     {
+      emoji: "🌎",
+      company: "Nvidia",
+      role: "Gen AI SWE",
+      dates: "Present",
+      type: "internship",
+      highlight: true,
+      description: "Benchmarking & eval for the coolest world model ever: ",
+      linkText: "Cosmos3",
+      linkUrl: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/",
+    },
+    {
       emoji: "👮🏾",
       company: "Stanford AI Lab",
       role: "Research Assistant",
+      advisor: "Dan Jurafsky",
       dates: "Fall 2025",
       type: "research",
       description:
-        "Building data pipelines to process large-scale body cam footage.",
+        "Building data pipelines to process laaarge-scale body cam footage",
     },
     {
       emoji: "🧠",
-      company: "Scaling Intelligence Lab",
+      company: "Stanford Scaling Intelligence Lab",
       role: "Summer Research Intern",
+      advisor: "Azalia Mirhoseini",
       dates: "Summer 2025",
       type: "research",
       description:
-        "We want you to be able to reason over an entire textbook when you prompt an LLM. Towards 1B context lengths.",
+        "We want you to be able to reason over an entire textbook when you prompt an LLM. Towards 1B context lengths",
     },
     {
       emoji: "🎮",
@@ -26,8 +39,9 @@ const experienceData = {
       role: "Gen AI SWE Intern",
       dates: "Fall 2024",
       type: "internship",
-      description:
-        "Building world foundation (video gen) models, try it out: https://build.nvidia.com/nvidia/cosmos-predict1-7b",
+      description: "Building world foundation (video gen) models, try it out: ",
+      linkText: "Cosmos1",
+      linkUrl: "https://build.nvidia.com/nvidia/cosmos-predict1-7b",
     },
     {
       emoji: "💸",
@@ -35,7 +49,7 @@ const experienceData = {
       role: "SWE Intern",
       dates: "Summer 2024",
       type: "internship",
-      description: "We made tools that helped traders make better decisions :)",
+      description: "We made tools that helped traders make better decisions and more $$",
     },
     {
       emoji: "👩🏽‍🏫",
@@ -44,16 +58,20 @@ const experienceData = {
       dates: "Since Spring 2023",
       type: "teaching",
       description:
-        "Teach a section, grade assignments, hold LAIR (office hours), debug my dance little's code after practice.",
+        "Teach a section, grade assignments, hold LAIR (office hours), debug my dance little's code after practice",
     },
     {
       emoji: "🔬",
-      company: "Social & Language Technologies Lab",
+      company: "Stanford SALT (Social & Language Technologies Lab)",
       role: "Undergrad Researcher",
+      advisor: "Diyi Yang",
       dates: "Since Jan 2023",
       type: "research",
       description:
-        "We wondered why ChatGPT doesn't ask followup questions and wrote a paper about it: https://arxiv.org/abs/2311.09144.",
+        "We wondered why ChatGPT doesn't ask followup questions and wrote a ",
+      linkText: "paper",
+      linkUrl: "https://arxiv.org/abs/2311.09144",
+      linkSuffix: " on what we found",
     },
     {
       emoji: "✈️",
@@ -62,7 +80,7 @@ const experienceData = {
       dates: "Summer 2023",
       type: "internship",
       description:
-        "Designed a data pipeline to transfer supply chain data 2000x faster thru data segmentation, query chunking, multi-threading, SQL optization, etc. And got to see some helicopters.",
+        "Designed a data pipeline to transfer supply chain data 2000x faster. And got to see some helicopters",
     },
     // {
     //   emoji: "🛍️",

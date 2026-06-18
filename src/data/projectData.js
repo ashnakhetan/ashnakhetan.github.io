@@ -1,29 +1,39 @@
 // data for the projects section of the portfolio (will be used to populate the project cards)
 import trackLab from "../assets/tracklab.png";
 import wander from "../assets/Route.png";
-import profile from "../assets/profile.png";
 import pupper from "../assets/Pupper.png";
 import trashTalk from "../assets/TrashTalk.png";
 import plastiClass from "../assets/PlastiClass.png";
 import planIt from "../assets/PlanIt.png";
 import rehearal from "../assets/Rehearsal.png";
 import saveFace from "../assets/saveFace.jpg";
+import politicsBench from "../assets/politicsbench.svg";
 
 const projectData = {
   projects: [
+    {
+      imageUrl: politicsBench,
+      name: "PoliticsBench",
+      description:
+        "Benchmarked political evals for LLMs with my little brother; will be at the AI4Good Workshop @ ICML 2026",
+      tools: "AI evals, benchmarking, politics",
+      linkUrl: "https://arxiv.org/abs/2603.23841",
+    },
     {
       imageUrl: rehearal,
       name: "Rehearsal",
       description: "Practice conflict resolution with an agent",
       tools: "ConvAI, React Native",
-      //   linkUrl: "https://ashnakhetan.github.io/tracklab/"
+      linkUrl:
+        "https://drive.google.com/file/d/1aTxeLhu8Q6nsnVYMeyPWBgJf9rSdZhKM/view?usp=drivesdk",
     },
     {
       imageUrl: saveFace,
       name: "SaveFace",
       description: "ControlNets for facial features.",
-      tools: "CNNS, Diffusion",
-      //   linkUrl: "",
+      tools: "CNNs, Diffusion",
+      linkUrl:
+        "https://drive.google.com/file/d/1squA7D4CD1aShl2WK5OufAtro_5mlRL9/view?usp=drivesdk",
     },
     {
       imageUrl: trackLab,
@@ -34,18 +44,18 @@ const projectData = {
       linkUrl: "https://ashnakhetan.github.io/tracklab/",
     },
     {
+      imageUrl: pupper,
+      name: "Pupper",
+      description: "Our quadruped robot that comes to you when called!",
+      tools: "DepthAI, Raspberry Pi",
+      // linkUrl: "https://ashnakhetan.github.io/tracklab/"
+    },
+    {
       imageUrl: wander,
       name: "Wander",
       description:
         "Create audio stories and listen to others' as you roadtrip.",
       tools: "React Native, Google Maps API, Supabase",
-      // linkUrl: "https://ashnakhetan.github.io/tracklab/"
-    },
-    {
-      imageUrl: pupper,
-      name: "Pupper",
-      description: "Our quadruped robot that comes to you when called!",
-      tools: "DepthAI, Raspberry Pi",
       // linkUrl: "https://ashnakhetan.github.io/tracklab/"
     },
     {

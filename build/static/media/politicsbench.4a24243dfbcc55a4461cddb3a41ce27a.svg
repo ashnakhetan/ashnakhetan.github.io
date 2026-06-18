@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">PoliticsBench project preview</title>
+  <desc id="desc">An abstract benchmark dashboard with ballot cards, model nodes, and evaluation bars.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211917"/>
+      <stop offset="0.52" stop-color="#4d2334"/>
+      <stop offset="1" stop-color="#315c51"/>
+    </linearGradient>
+    <linearGradient id="barPink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3b7ba"/>
+      <stop offset="1" stop-color="#8d3151"/>
+    </linearGradient>
+    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c8decf"/>
+      <stop offset="1" stop-color="#315c51"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#150f0e" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <path d="M84 184c104-64 218-87 342-68 164 25 279 130 433 111 105-13 178-70 257-132" fill="none" stroke="#fffefa" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M98 496c144-98 288-114 432-47 146 68 272 75 389 23 76-34 132-86 202-154" fill="none" stroke="#fffefa" stroke-opacity="0.1" stroke-width="2"/>
+  <g opacity="0.22">
+    <circle cx="146" cy="126" r="4" fill="#fffefa"/>
+    <circle cx="942" cy="96" r="5" fill="#fffefa"/>
+    <circle cx="1058" cy="542" r="4" fill="#fffefa"/>
+    <circle cx="682" cy="138" r="3" fill="#fffefa"/>
+    <circle cx="250" cy="554" r="3" fill="#fffefa"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="118" y="128" width="360" height="420" rx="18" fill="#fffefa" fill-opacity="0.94"/>
+    <rect x="154" y="172" width="118" height="18" rx="9" fill="#8d3151"/>
+    <rect x="154" y="218" width="244" height="18" rx="9" fill="#ded8d0"/>
+    <rect x="154" y="258" width="192" height="18" rx="9" fill="#ded8d0"/>
+    <rect x="154" y="326" width="72" height="72" rx="10" fill="#f3b7ba"/>
+    <path d="m176 360 20 20 44-52" fill="none" stroke="#211917" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    <rect x="154" y="438" width="248" height="18" rx="9" fill="#c8decf"/>
+    <rect x="154" y="478" width="176" height="18" rx="9" fill="#ded8d0"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="724" y="128" width="360" height="420" rx="18" fill="#fffefa" fill-opacity="0.92"/>
+    <rect x="764" y="184" width="240" height="22" rx="11" fill="#ded8d0"/>
+    <rect x="764" y="246" width="188" height="28" rx="14" fill="url(#barPink)"/>
+    <rect x="764" y="318" width="260" height="28" rx="14" fill="url(#barGreen)"/>
+    <rect x="764" y="390" width="216" height="28" rx="14" fill="#c58f38"/>
+    <g fill="#211917" opacity="0.86">
+      <circle cx="1028" cy="260" r="10"/>
+      <circle cx="1028" cy="332" r="10"/>
+      <circle cx="1028" cy="404" r="10"/>
+    </g>
+    <path d="M814 486h180" stroke="#8d3151" stroke-width="12" stroke-linecap="round"/>
+    <path d="M814 486h126" stroke="#315c51" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g stroke="#fffefa" stroke-opacity="0.28" stroke-width="3" fill="none">
+    <path d="M478 274c82-82 164-82 246 0"/>
+    <path d="M478 402c82 82 164 82 246 0"/>
+  </g>
+  <g fill="#fffefa">
+    <circle cx="600" cy="338" r="74" fill-opacity="0.94"/>
+    <circle cx="600" cy="338" r="46" fill="#211917" fill-opacity="0.92"/>
+    <path d="M568 338h64M600 306v64" stroke="#fffefa" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="600" y="602" fill="#fffefa" font-family="Georgia, 'Times New Roman', serif" font-size="64" text-anchor="middle">PoliticsBench</text>
+</svg>

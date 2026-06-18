@@ -4,10 +4,9 @@ import React, { useRef, useState } from "react";
 import Intro from "./sections/Intro";
 import Experience from "./sections/Experience";
 
-/* Components */
 import EmailCopy from "./components/EmailCopy";
+import AgentMode from "./components/AgentMode";
 import ProjectCard from "./components/Project";
-import Header from "./components/Header";
 
 /* Icons + Images */
 import LinkedInIcon from "./icons/LinkedInIcon";
@@ -16,17 +15,16 @@ import GithubIcon from "./icons/GithubIcon";
 /* Data */
 import projectData from "./data/projectData";
 
-/* Styles */
-import colors from "./themes/colors";
 import "./App.css";
 import { Grid } from "@mui/material";
 import DevpostIcon from "./icons/DevpostIcon";
 import InstaIcon from "./icons/InstaIcon";
 import TwitterIcon from "./icons/TwitterIcon";
+import SubstackIcon from "./icons/SubstackIcon";
 
 function App() {
-  const [numProjDisplayed, setNumProjDisplayed] = useState(6);
-  const [theme, setTheme] = useState("normal"); // ['ai', 'christmas', 'normal']
+  const initialProjectCount = 5;
+  const [numProjDisplayed, setNumProjDisplayed] = useState(initialProjectCount);
 
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
@@ -45,7 +43,6 @@ function App() {
 
   const scrollToMoreProjects = () => {
     const seventhProject = document.getElementById("project-5"); // Assuming IDs start from 0
-    console.log(seventhProject);
     if (seventhProject) {
       window.scrollTo({
         top: seventhProject.offsetTop - headerHeight,
@@ -56,17 +53,19 @@ function App() {
 
   const showMoreProjects = () => {
     setNumProjDisplayed(projectData.projects.length);
-    console.log("here");
-    scrollToMoreProjects();
+    window.setTimeout(scrollToMoreProjects, 0);
   };
 
   const showLessProjects = () => {
-    setNumProjDisplayed(6);
+    setNumProjDisplayed(initialProjectCount);
   };
 
   return (
-    <div>
-      <header style={{ backgroundColor: colors.header }}>
+    <div className="site-shell">
+      <header className="site-header">
+        <button className="brand-mark" onClick={() => scrollToSection(section1Ref)}>
+          ashna.me
+        </button>
         <div className="navButtons">
           <button onClick={() => scrollToSection(section1Ref)}>Me</button>
           <button onClick={() => scrollToSection(section2Ref)}>Projects</button>
@@ -80,95 +79,101 @@ function App() {
           <a
             href="https://www.linkedin.com/in/ashna-khetan/"
             target="_blank"
+            rel="noreferrer"
             className="linkedin-button"
+            aria-label="LinkedIn"
           >
             <LinkedInIcon />
           </a>
           <a
             href="https://github.com/ashnakhetan/"
             target="_blank"
+            rel="noreferrer"
             className="linkedin-button"
+            aria-label="GitHub"
           >
             <GithubIcon />
           </a>
           <a
             href="https://devpost.com/ashnakhetan/"
             target="_blank"
+            rel="noreferrer"
             className="linkedin-button"
+            aria-label="Devpost"
           >
             <DevpostIcon />
           </a>
           <a
             href="https://twitter.com/ashna_khetan"
             target="_blank"
+            rel="noreferrer"
             className="linkedin-button"
+            aria-label="Twitter"
           >
             <TwitterIcon />
           </a>
           <a
             href="https://instagram.com/ashnakhetan/"
             target="_blank"
+            rel="noreferrer"
             className="linkedin-button"
+            aria-label="Instagram"
           >
             <InstaIcon />
           </a>
+          <a
+            href="https://ashnak03.substack.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="linkedin-button"
+            aria-label="Substack"
+          >
+            <SubstackIcon />
+          </a>
+          <AgentMode />
           <EmailCopy text="ashnak@stanford.edu" />
         </div>
       </header>
 
-      <div style={{ paddingTop: "30px", backgroundColor: colors.offwhite }}>
+      <main>
         {/* Section 1 */}
-        <section ref={section1Ref} style={{}}>
+        <section ref={section1Ref}>
           <Intro />
         </section>
 
         {/* Section 2 */}
         <section
           ref={section2Ref}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            backgroundColor: colors.offwhite,
-          }}
+          className="section-block projects-section"
         >
-          <h1>Projects</h1>
+          <div className="section-heading">
+            <p className="eyebrow">projects</p>
+            <h2>Little machines from my brain attic.</h2>
+          </div>
           <Grid container spacing={8} className="projects">
             {projectData.projects
               .slice(0, numProjDisplayed)
               .map((project, index) => (
-                <Grid item xs={8} md={4} key={index}>
+                <Grid item xs={12} sm={6} md={index < 2 ? 6 : 4} key={index}>
                   <ProjectCard
                     id={`project-${index}`}
-                    key={index}
                     imageUrl={project.imageUrl}
                     name={project.name}
                     description={project.description}
                     tools={project.tools}
                     linkUrl={project.linkUrl}
+                    featured={index < 2}
                   />
                 </Grid>
               ))}
 
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-              }}
-            >
+            <div className="project-toggle">
               {numProjDisplayed < projectData.projects.length ? (
-                <button
-                  style={{ flex: 1, marginTop: "30px" }}
-                  onClick={showMoreProjects}
-                >
+                <button className="outline-button" onClick={showMoreProjects}>
                   See More
                 </button>
               ) : (
-                <button
-                  style={{ flex: 1, marginTop: "30px" }}
-                  onClick={showLessProjects}
-                >
+                <button className="outline-button" onClick={showLessProjects}>
                   See Less
                 </button>
               )}
@@ -178,22 +183,14 @@ function App() {
 
         <section
           ref={section3Ref}
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            flexDirection: "column",
-            backgroundColor: colors.offwhite,
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
+          className="section-block experience-section"
         >
           <Experience />
           <footer className="footer">
-            made in 2023, last updated sept 16 2025, made using React.js, mui, +
-            a little imagination, by ashna
+            made with React, MUI, Codex, and a little imagination by ashna
           </footer>
         </section>
-      </div>
+      </main>
     </div>
   );
 }
