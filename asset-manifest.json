@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.23ea6a5a.css",
-    "main.js": "/static/js/main.8a364bdd.js",
+    "main.css": "/static/css/main.d1185230.css",
+    "main.js": "/static/js/main.cc87b9aa.js",
     "static/js/787.f1c872b9.chunk.js": "/static/js/787.f1c872b9.chunk.js",
     "static/media/worldgen-background.png": "/static/media/worldgen-background.7cb8cec412354eeb5b69.png",
     "static/media/profile-grad-crop.jpg": "/static/media/profile-grad-crop.bd00f9b4c5eeb96779b0.jpg",
@@ -13,14 +13,15 @@
     "static/media/TrashTalk.png": "/static/media/TrashTalk.7008447efd19585a0bee.png",
     "static/media/tracklab.png": "/static/media/tracklab.3a1ddca6666b9755df83.png",
     "static/media/saveFace.jpg": "/static/media/saveFace.63975d7d0ac9a7dc0cae.jpg",
+    "static/media/aggrevision.svg": "/static/media/aggrevision.f12fd3288471a6d865dbba203cad1404.svg",
     "static/media/politicsbench.svg": "/static/media/politicsbench.4a24243dfbcc55a4461cddb3a41ce27a.svg",
     "index.html": "/index.html",
-    "main.23ea6a5a.css.map": "/static/css/main.23ea6a5a.css.map",
-    "main.8a364bdd.js.map": "/static/js/main.8a364bdd.js.map",
+    "main.d1185230.css.map": "/static/css/main.d1185230.css.map",
+    "main.cc87b9aa.js.map": "/static/js/main.cc87b9aa.js.map",
     "787.f1c872b9.chunk.js.map": "/static/js/787.f1c872b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23ea6a5a.css",
-    "static/js/main.8a364bdd.js"
+    "static/css/main.d1185230.css",
+    "static/js/main.cc87b9aa.js"
   ]
 }

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AggreVision project preview</title>
+  <desc id="desc">A driver face with computer vision landmarks, emotion indicators, and an Affectiva EMPath label.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211917"/>
+      <stop offset="0.48" stop-color="#3a242d"/>
+      <stop offset="1" stop-color="#315c51"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3b7ba"/>
+      <stop offset="0.5" stop-color="#fffefa"/>
+      <stop offset="1" stop-color="#c8decf"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#130f0d" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.2" stroke="#fffefa" stroke-width="2" fill="none">
+    <path d="M96 142h996M96 246h996M96 350h996M96 454h996M96 558h996"/>
+    <path d="M180 74v528M348 74v528M516 74v528M684 74v528M852 74v528M1020 74v528"/>
+  </g>
+  <g opacity="0.22" fill="#fffefa">
+    <circle cx="154" cy="116" r="4"/>
+    <circle cx="272" cy="532" r="3"/>
+    <circle cx="994" cy="132" r="5"/>
+    <circle cx="1064" cy="516" r="3"/>
+    <circle cx="676" cy="104" r="4"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="108" y="110" width="984" height="468" rx="18" fill="#fffefa" fill-opacity="0.93"/>
+    <rect x="146" y="148" width="300" height="54" rx="27" fill="#211917"/>
+    <text x="296" y="184" fill="#fffefa" font-family="Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">Affectiva EMPath</text>
+
+    <g transform="translate(172 234)">
+      <path d="M120 28c92-42 192-26 250 38 52 58 62 149 28 226-41 94-154 143-255 111C41 371-16 262 15 163 31 111 67 52 120 28Z" fill="#ead0db"/>
+      <path d="M93 174c30-30 68-31 104-5M254 170c38-27 76-23 104 8" fill="none" stroke="#211917" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="146" cy="206" r="14" fill="#211917"/>
+      <circle cx="310" cy="206" r="14" fill="#211917"/>
+      <path d="M218 220c-14 34-10 61 18 78" fill="none" stroke="#8d3151" stroke-width="10" stroke-linecap="round"/>
+      <path d="M151 342c58 32 121 30 188-5" fill="none" stroke="#211917" stroke-width="14" stroke-linecap="round"/>
+      <g stroke="#8d3151" stroke-width="4" fill="none" opacity="0.72">
+        <rect x="74" y="136" width="132" height="108" rx="8"/>
+        <rect x="242" y="136" width="136" height="108" rx="8"/>
+        <path d="M140 244v34M310 244v34M206 190h36"/>
+      </g>
+      <g fill="#315c51">
+        <circle cx="88" cy="152" r="7"/>
+        <circle cx="196" cy="172" r="6"/>
+        <circle cx="262" cy="156" r="7"/>
+        <circle cx="366" cy="182" r="6"/>
+        <circle cx="232" cy="300" r="7"/>
+        <circle cx="172" cy="350" r="6"/>
+        <circle cx="322" cy="338" r="6"/>
+      </g>
+    </g>
+
+    <g transform="translate(666 214)">
+      <text x="0" y="0" fill="#8d3151" font-family="Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="4">EXPRESSION SIGNAL</text>
+      <rect x="0" y="42" width="302" height="28" rx="14" fill="#ded8d0"/>
+      <rect x="0" y="42" width="236" height="28" rx="14" fill="#8d3151"/>
+      <text x="0" y="116" fill="#315c51" font-family="Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="4">DRIVER SAFETY LOCK</text>
+      <rect x="0" y="158" width="302" height="28" rx="14" fill="#ded8d0"/>
+      <rect x="0" y="158" width="268" height="28" rx="14" fill="#315c51"/>
+      <path d="M0 248h300" stroke="#211917" stroke-width="2" stroke-opacity="0.16"/>
+      <g fill="none" stroke="url(#scan)" stroke-width="7" stroke-linecap="round">
+        <path d="M14 302c41-46 82-48 124-6s84 36 128-18"/>
+        <path d="M16 352c49-28 92-23 129 16s80 41 130 4"/>
+      </g>
+    </g>
+  </g>
+
+  <rect x="122" y="226" width="396" height="408" rx="14" fill="none" stroke="url(#scan)" stroke-width="5" stroke-dasharray="16 14"/>
+  <path d="M122 236h82M436 634h82M518 236v82M122 552v82" stroke="#f3b7ba" stroke-width="8" stroke-linecap="round"/>
+</svg>
