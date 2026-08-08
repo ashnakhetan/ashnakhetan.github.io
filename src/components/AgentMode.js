@@ -74,7 +74,7 @@ const AgentMode = () => {
             <dl className="agent-mode-facts">
               <div>
                 <dt>Current</dt>
-                <dd>Gen AI SWE at NVIDIA, benchmarking and eval for Cosmos3</dd>
+                <dd>Gen AI SWE at NVIDIA, helping world models understand the physical world with Cosmos3</dd>
               </div>
               <div>
                 <dt>Good topics</dt>

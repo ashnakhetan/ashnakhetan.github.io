@@ -9,7 +9,7 @@ const experienceData = {
       dates: "Present",
       type: "internship",
       highlight: true,
-      description: "Benchmarking & eval for the coolest world model ever: ",
+      description: "Helping world models understand the physical world with ",
       linkText: "Cosmos3",
       linkUrl: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/",
     },
