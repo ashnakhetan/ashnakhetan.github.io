@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e6d1659.css",
-    "main.js": "/static/js/main.aad232bb.js",
+    "main.css": "/static/css/main.d9b9fbce.css",
+    "main.js": "/static/js/main.3be1e4c5.js",
     "static/js/787.f1c872b9.chunk.js": "/static/js/787.f1c872b9.chunk.js",
-    "static/media/profile-grad-crop.jpg": "/static/media/profile-grad-crop.bd00f9b4c5eeb96779b0.jpg",
     "static/media/PlastiClass.png": "/static/media/PlastiClass.ce2c50c2346fa174830b.png",
     "static/media/Rehearsal.png": "/static/media/Rehearsal.983c46b6ccc78ba16aba.png",
     "static/media/Pupper.png": "/static/media/Pupper.568474d3b852af186130.png",
@@ -11,18 +10,23 @@
     "static/media/PlanIt.png": "/static/media/PlanIt.99b4cf68ccacbc4e9a4a.png",
     "static/media/TrashTalk.png": "/static/media/TrashTalk.7008447efd19585a0bee.png",
     "static/media/tracklab.png": "/static/media/tracklab.3a1ddca6666b9755df83.png",
+    "static/media/profile-720.webp": "/static/media/profile-720.787c6f2db9ff50716c16.webp",
     "static/media/grounding-gaps-figure.png": "/static/media/grounding-gaps-figure.a356a0c3d78702c5b6ad.png",
+    "static/media/profile-480.webp": "/static/media/profile-480.e191b3b7a2336be96fc3.webp",
     "static/media/politicsbench-figure.png": "/static/media/politicsbench-figure.e8b1e433e0aa35fe08b9.png",
     "static/media/saveFace.jpg": "/static/media/saveFace.63975d7d0ac9a7dc0cae.jpg",
+    "static/media/cosmos3-figure.webp": "/static/media/cosmos3-figure.8dd38529e16e8e3319bf.webp",
+    "static/media/math-visual-aids-figure.webp": "/static/media/math-visual-aids-figure.c6fdd53e7f8d180ef98f.webp",
+    "static/media/profile-240.webp": "/static/media/profile-240.cdd1afdd43fde29ae591.webp",
     "static/media/aggrevision.svg": "/static/media/aggrevision.f12fd3288471a6d865dbba203cad1404.svg",
     "static/media/politicsbench.svg": "/static/media/politicsbench.4a24243dfbcc55a4461cddb3a41ce27a.svg",
     "index.html": "/index.html",
-    "main.2e6d1659.css.map": "/static/css/main.2e6d1659.css.map",
-    "main.aad232bb.js.map": "/static/js/main.aad232bb.js.map",
+    "main.d9b9fbce.css.map": "/static/css/main.d9b9fbce.css.map",
+    "main.3be1e4c5.js.map": "/static/js/main.3be1e4c5.js.map",
     "787.f1c872b9.chunk.js.map": "/static/js/787.f1c872b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e6d1659.css",
-    "static/js/main.aad232bb.js"
+    "static/css/main.d9b9fbce.css",
+    "static/js/main.3be1e4c5.js"
   ]
 }
