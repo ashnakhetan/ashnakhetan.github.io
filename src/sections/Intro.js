@@ -1,17 +1,17 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import EmailCopy from "../components/EmailCopy";
-import profilePhoto from "../assets/profile-grad-crop.jpg";
+import profilePhoto from "../assets/profile-240.webp";
+import profilePhoto480 from "../assets/profile-480.webp";
+import profilePhoto720 from "../assets/profile-720.webp";
 
 const Intro = () => (
   <>
     <div className="intro-grid">
       <div className="intro-copy">
-        <p className="eyebrow">Research &amp; engineering</p>
         <h1 id="intro-title">Ashna Khetan</h1>
         <p className="intro-role">
-          Generative AI Software Engineer <span aria-hidden="true">/</span>{" "}
-          NVIDIA
+          AI Engineer <span aria-hidden="true">/</span> NVIDIA
         </p>
         <p className="intro-lede">
           I work on world models, robotics, and agents, with a focus on how
@@ -41,6 +41,13 @@ const Intro = () => (
         <div className="intro-links">
           <EmailCopy text="ashnakhetan@gmail.com" label="Email" />
           <a
+            href="https://scholar.google.com/citations?user=-OxZajQAAAAJ&hl=en"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Google Scholar <ArrowUpRight size={14} />
+          </a>
+          <a
             href="https://github.com/ashnakhetan/"
             target="_blank"
             rel="noreferrer"
@@ -66,9 +73,14 @@ const Intro = () => (
       <figure className="portrait">
         <img
           src={profilePhoto}
+          srcSet={`${profilePhoto} 240w, ${profilePhoto480} 480w, ${profilePhoto720} 720w`}
+          sizes="(max-width: 520px) 96px, (max-width: 700px) 150px, (max-width: 900px) 190px, 224px"
           alt="Ashna Khetan at her Stanford graduation"
-          width="2420"
-          height="3024"
+          width="240"
+          height="300"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
         />
         <figcaption>Stanford University</figcaption>
       </figure>
@@ -86,8 +98,8 @@ const Intro = () => (
       </div>
       <div>
         <span className="focus-index">03</span>
-        <h2>Agentic data collection</h2>
-        <p>Data for learning &amp; interaction</p>
+        <h2>Conversational AI</h2>
+        <p>Grounding &amp; human-AI interaction</p>
       </div>
     </div>
   </>

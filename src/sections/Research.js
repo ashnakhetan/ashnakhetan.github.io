@@ -31,6 +31,7 @@ const Research = () => (
               </a>
             </h3>
             <p className="publication-authors">
+              {publication.authorGroup && `${publication.authorGroup}, including `}
               {publication.authors.map((author, index) => (
                 <React.Fragment key={author}>
                   {index > 0 && ", "}
@@ -43,14 +44,26 @@ const Research = () => (
               ))}
             </p>
             <p className="publication-description">{publication.description}</p>
-            <a
-              className="paper-link"
-              href={publication.paperUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FileText size={14} /> Paper <ArrowUpRight size={14} />
-            </a>
+            <div className="publication-links">
+              <a
+                className="paper-link"
+                href={publication.paperUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FileText size={14} /> Paper <ArrowUpRight size={14} />
+              </a>
+              {publication.projectUrl && (
+                <a
+                  className="paper-link"
+                  href={publication.projectUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Project <ArrowUpRight size={14} />
+                </a>
+              )}
+            </div>
           </div>
         </article>
       ))}
