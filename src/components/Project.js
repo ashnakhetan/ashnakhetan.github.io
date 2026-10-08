@@ -1,45 +1,26 @@
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
-const ProjectCard = ({ id, imageUrl, name, description, tools, linkUrl, featured }) => {
-  const isClickable = linkUrl && linkUrl.trim() !== "";
+const Project = ({ imageUrl, name, description, tools, linkUrl }) => (
+  <article className="project-row">
+    <div className="project-image-wrap">
+      <img src={imageUrl} alt="" loading="lazy" className="project-image" />
+    </div>
+    <div className="project-body">
+      <h3>
+        {linkUrl ? (
+          <a href={linkUrl} target="_blank" rel="noreferrer">
+            {name}
+            <ArrowUpRight size={16} />
+          </a>
+        ) : (
+          name
+        )}
+      </h3>
+      <p className="project-description">{description}</p>
+      <p className="project-tools">{tools}</p>
+    </div>
+  </article>
+);
 
-  const cardContent = (
-    <>
-      <div className="project-image-wrap">
-        <img src={imageUrl} alt="" className="project-image" />
-      </div>
-      <div className="project-body">
-        <div>
-          <p className="project-kicker">{featured ? "featured project" : "project"}</p>
-          <h3>{name}</h3>
-          <p className="project-description">{description}</p>
-        </div>
-        <p className="project-tools">{tools}</p>
-      </div>
-    </>
-  );
-
-  return (
-    <article
-      id={id}
-      className={`project-card ${featured ? "project-card-featured" : ""} ${
-        isClickable ? "project-card-linkable" : ""
-      }`}
-    >
-      {isClickable ? (
-        <a
-          href={linkUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link"
-        >
-          {cardContent}
-        </a>
-      ) : (
-        cardContent
-      )}
-    </article>
-  );
-};
-
-export default ProjectCard;
+export default Project;

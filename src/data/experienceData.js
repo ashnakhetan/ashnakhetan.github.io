@@ -4,8 +4,8 @@ const experienceData = {
   internships: [
     {
       emoji: "🌎",
-      company: "Nvidia",
-      role: "Gen AI SWE",
+      company: "NVIDIA",
+      role: "Generative AI Software Engineer",
       dates: "Present",
       type: "internship",
       highlight: true,
@@ -21,7 +21,7 @@ const experienceData = {
       dates: "Fall 2025",
       type: "research",
       description:
-        "Building data pipelines to process laaarge-scale body cam footage",
+        "Building data pipelines for large-scale analysis of body-camera footage",
     },
     {
       emoji: "🧠",
@@ -31,56 +31,56 @@ const experienceData = {
       dates: "Summer 2025",
       type: "research",
       description:
-        "We want you to be able to reason over an entire textbook when you prompt an LLM. Towards 1B context lengths",
+        "Researching long-context reasoning in language models, toward billion-token context lengths",
     },
     {
       emoji: "🎮",
-      company: "Nvidia",
-      role: "Gen AI SWE Intern",
+      company: "NVIDIA",
+      role: "Generative AI Software Engineering Intern",
       dates: "Fall 2024",
       type: "internship",
-      description: "Building world foundation (video gen) models, try it out: ",
+      description: "Building video-generation world foundation models with ",
       linkText: "Cosmos1",
       linkUrl: "https://build.nvidia.com/nvidia/cosmos-predict1-7b",
     },
     {
       emoji: "💸",
       company: "IMC Trading",
-      role: "SWE Intern",
+      role: "Software Engineering Intern",
       dates: "Summer 2024",
       type: "internship",
-      description: "We made tools that helped traders make better decisions and more $$",
+      description:
+        "Developing software tools to support trading decisions and analysis",
     },
     {
       emoji: "👩🏽‍🏫",
       company: "Stanford CS",
-      role: "Section Leader for CS 106B (Prog. Abstractions)",
+      role: "Section Leader, CS 106B: Programming Abstractions",
       dates: "Since Spring 2023",
       type: "teaching",
       description:
-        "Teach a section, grade assignments, hold LAIR (office hours), debug my dance little's code after practice",
+        "Leading sections, providing office hours, and teaching algorithms, data structures, and software design",
     },
     {
       emoji: "🔬",
       company: "Stanford SALT (Social & Language Technologies Lab)",
-      role: "Undergrad Researcher",
+      role: "Undergraduate Researcher",
       advisor: "Diyi Yang",
       dates: "Since Jan 2023",
       type: "research",
       description:
-        "We wondered why ChatGPT doesn't ask followup questions and wrote a ",
-      linkText: "paper",
+        "Investigating conversational grounding in language models; co-author of ",
+      linkText: "Grounding Gaps in Language Model Generations",
       linkUrl: "https://arxiv.org/abs/2311.09144",
-      linkSuffix: " on what we found",
     },
     {
       emoji: "✈️",
       company: "Lockheed Martin",
-      role: "Software Engineer/Full Stack Intern",
+      role: "Software Engineering Intern",
       dates: "Summer 2023",
       type: "internship",
       description:
-        "Designed a data pipeline to transfer supply chain data 2000x faster. And got to see some helicopters",
+        "Designing a supply-chain data pipeline that accelerated data transfer by 2000x",
     },
     // {
     //   emoji: "🛍️",

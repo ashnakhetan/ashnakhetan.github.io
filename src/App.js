@@ -1,196 +1,155 @@
-import React, { useRef, useState } from "react";
-
-/* Sections */
+import React, { useState } from "react";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import Intro from "./sections/Intro";
+import Research from "./sections/Research";
 import Experience from "./sections/Experience";
-
-import EmailCopy from "./components/EmailCopy";
 import AgentMode from "./components/AgentMode";
-import ProjectCard from "./components/Project";
-
-/* Icons + Images */
-import LinkedInIcon from "./icons/LinkedInIcon";
-import GithubIcon from "./icons/GithubIcon";
-
-/* Data */
+import EmailCopy from "./components/EmailCopy";
+import Project from "./components/Project";
 import projectData from "./data/projectData";
-
 import "./App.css";
-import { Grid } from "@mui/material";
-import DevpostIcon from "./icons/DevpostIcon";
-import InstaIcon from "./icons/InstaIcon";
-import TwitterIcon from "./icons/TwitterIcon";
-import SubstackIcon from "./icons/SubstackIcon";
 
 function App() {
-  const initialProjectCount = 5;
-  const [numProjDisplayed, setNumProjDisplayed] = useState(initialProjectCount);
-
-  const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
-
-  const headerHeight = 90;
-
-  const scrollToSection = (sectionRef) => {
-    if (sectionRef.current) {
-      window.scrollTo({
-        top: sectionRef.current.offsetTop - headerHeight,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollToMoreProjects = () => {
-    const seventhProject = document.getElementById("project-5"); // Assuming IDs start from 0
-    if (seventhProject) {
-      window.scrollTo({
-        top: seventhProject.offsetTop - headerHeight,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const showMoreProjects = () => {
-    setNumProjDisplayed(projectData.projects.length);
-    window.setTimeout(scrollToMoreProjects, 0);
-  };
-
-  const showLessProjects = () => {
-    setNumProjDisplayed(initialProjectCount);
-  };
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const projects = projectData.projects.filter(
+    (project) => project.name !== "PoliticsBench",
+  );
 
   return (
     <div className="site-shell">
+      <a className="skip-link" href="#about">
+        Skip to content
+      </a>
       <header className="site-header">
-        <button className="brand-mark" onClick={() => scrollToSection(section1Ref)}>
-          ashna.me
-        </button>
-        <div className="navButtons">
-          <button onClick={() => scrollToSection(section1Ref)}>Me</button>
-          <button onClick={() => scrollToSection(section2Ref)}>Projects</button>
-          <button onClick={() => scrollToSection(section3Ref)}>
-            Experience
-          </button>
-        </div>
-
-        <div className="contactButtons">
-          {/* Social media and contact links */}
-          <a
-            href="https://www.linkedin.com/in/ashna-khetan/"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-button"
-            aria-label="LinkedIn"
-          >
-            <LinkedInIcon />
+        <div className="header-inner">
+          <a className="brand-mark" href="#about">
+            Ashna Khetan
           </a>
-          <a
-            href="https://github.com/ashnakhetan/"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-button"
-            aria-label="GitHub"
-          >
-            <GithubIcon />
-          </a>
-          <a
-            href="https://devpost.com/ashnakhetan/"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-button"
-            aria-label="Devpost"
-          >
-            <DevpostIcon />
-          </a>
-          <a
-            href="https://twitter.com/ashna_khetan"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-button"
-            aria-label="Twitter"
-          >
-            <TwitterIcon />
-          </a>
-          <a
-            href="https://instagram.com/ashnakhetan/"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-button"
-            aria-label="Instagram"
-          >
-            <InstaIcon />
-          </a>
-          <a
-            href="https://ashnak03.substack.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-button"
-            aria-label="Substack"
-          >
-            <SubstackIcon />
-          </a>
-          <AgentMode />
-          <EmailCopy text="ashnak@stanford.edu" />
+          <nav className="site-nav" aria-label="Main navigation">
+            <a href="#research">Research</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a
+              href="https://ashnak03.substack.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Writing
+            </a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
       </header>
 
-      <main>
-        {/* Section 1 */}
-        <section ref={section1Ref}>
+      <main id="main-content">
+        <section
+          id="about"
+          className="intro-section"
+          aria-labelledby="intro-title"
+        >
           <Intro />
         </section>
 
-        {/* Section 2 */}
         <section
-          ref={section2Ref}
-          className="section-block projects-section"
+          id="research"
+          className="section-block"
+          aria-labelledby="research-title"
         >
-          <div className="section-heading">
-            <p className="eyebrow">projects</p>
-            <h2>Little machines from my brain attic.</h2>
-          </div>
-          <Grid container spacing={8} className="projects">
-            {projectData.projects
-              .slice(0, numProjDisplayed)
-              .map((project, index) => (
-                <Grid item xs={12} sm={6} md={index < 2 ? 6 : 4} key={index}>
-                  <ProjectCard
-                    id={`project-${index}`}
-                    imageUrl={project.imageUrl}
-                    name={project.name}
-                    description={project.description}
-                    tools={project.tools}
-                    linkUrl={project.linkUrl}
-                    featured={index < 2}
-                  />
-                </Grid>
-              ))}
-
-            <div className="project-toggle">
-              {numProjDisplayed < projectData.projects.length ? (
-                <button className="outline-button" onClick={showMoreProjects}>
-                  See More
-                </button>
-              ) : (
-                <button className="outline-button" onClick={showLessProjects}>
-                  See Less
-                </button>
-              )}
-            </div>
-          </Grid>
+          <Research />
         </section>
 
         <section
-          ref={section3Ref}
-          className="section-block experience-section"
+          id="experience"
+          className="section-block"
+          aria-labelledby="experience-title"
         >
           <Experience />
-          <footer className="footer">
-            made with React, MUI, Codex, and a little imagination by ashna
-          </footer>
+        </section>
+
+        <section
+          id="projects"
+          className="section-block"
+          aria-labelledby="projects-title"
+        >
+          <div className="section-heading">
+            <h2 id="projects-title">Selected projects</h2>
+            <span className="section-aside">
+              Robotics, vision &amp; applied AI
+            </span>
+          </div>
+          <div className="project-list" id="project-list">
+            {(showAllProjects ? projects : projects.slice(0, 3)).map(
+              (project) => (
+                <Project key={project.name} {...project} />
+              ),
+            )}
+          </div>
+          <button
+            className="project-toggle"
+            onClick={() => setShowAllProjects(!showAllProjects)}
+            aria-expanded={showAllProjects}
+            aria-controls="project-list"
+          >
+            {showAllProjects
+              ? "Show selected projects"
+              : `View all ${projects.length} projects`}
+            {showAllProjects ? (
+              <ChevronUp size={16} />
+            ) : (
+              <ChevronDown size={16} />
+            )}
+          </button>
+        </section>
+
+        <section
+          id="contact"
+          className="section-block contact-section"
+          aria-labelledby="contact-title"
+        >
+          <div>
+            <p className="eyebrow">Get in touch</p>
+            <h2 id="contact-title">Research conversations welcome.</h2>
+            <p>
+              For collaborations and conversations about world models, robotics,
+              and AI evaluation.
+            </p>
+          </div>
+          <EmailCopy
+            text="ashnakhetan@gmail.com"
+            label="Copy email"
+            buttonClassName="contact-button"
+          />
         </section>
       </main>
+
+      <footer className="site-footer">
+        <div className="footer-main">
+          <p>Ashna Khetan</p>
+          <div className="footer-links">
+            <a
+              href="https://x.com/ashna_khetan"
+              target="_blank"
+              rel="noreferrer"
+            >
+              X <ArrowUpRight size={13} />
+            </a>
+            <a href="https://cs4good.com/" target="_blank" rel="noreferrer">
+              CS for social good <ArrowUpRight size={13} />
+            </a>
+            <a
+              href="https://basmatiraas.wixsite.com/stanford"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dance <ArrowUpRight size={13} />
+            </a>
+            <AgentMode />
+          </div>
+        </div>
+        <p className="footer-note">
+          World models, robotics, and agentic systems
+        </p>
+      </footer>
     </div>
   );
 }

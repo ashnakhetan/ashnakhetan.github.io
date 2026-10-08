@@ -1,76 +1,96 @@
 import React from "react";
+import { ArrowUpRight } from "lucide-react";
+import EmailCopy from "../components/EmailCopy";
 import profilePhoto from "../assets/profile-grad-crop.jpg";
-import QuestionCard from "../components/Question";
 
-const Intro = () => {
-  return (
-    <div className="intro_section">
-      <div className="hero-copy">
-        <h1 className="intro">Hi, I'm Ashna.</h1>
-        <p className="hero-lede">
-          I make machines smarter so I don't have to be. Just graduated from
-          Stanford; now working on world models, robotics, and agents.
+const Intro = () => (
+  <>
+    <div className="intro-grid">
+      <div className="intro-copy">
+        <p className="eyebrow">Research &amp; engineering</p>
+        <h1 id="intro-title">Ashna Khetan</h1>
+        <p className="intro-role">
+          Generative AI Software Engineer <span aria-hidden="true">/</span>{" "}
+          NVIDIA
         </p>
-        <div className="hero-links">
+        <p className="intro-lede">
+          I work on world models, robotics, and agents, with a focus on how
+          intelligent systems understand and interact with the physical world.
+        </p>
+        <p className="intro-bio">
+          At{" "}
           <a
-            className="hero-link-world"
-            href="https://build.nvidia.com/nvidia/cosmos-predict1-7b"
+            href="https://research.nvidia.com/labs/cosmos-lab/cosmos3/"
             target="_blank"
             rel="noreferrer"
           >
-            world models
+            NVIDIA
           </a>
+          , I help build world foundation models with Cosmos3. I studied
+          Computer Science (B.S./M.S.) at{" "}
           <a
-            className="hero-link-good"
-            href="https://cs4good.com/"
+            href="https://www.cs.stanford.edu/"
             target="_blank"
             rel="noreferrer"
           >
-            social good
+            Stanford
           </a>
+          , where my research spanned long-context reasoning and conversational
+          AI.
+        </p>
+        <div className="intro-links">
+          <EmailCopy text="ashnakhetan@gmail.com" label="Email" />
           <a
-            className="hero-link-dance"
-            href="https://basmatiraas.wixsite.com/stanford"
+            href="https://github.com/ashnakhetan/"
             target="_blank"
             rel="noreferrer"
           >
-            dance
+            GitHub <ArrowUpRight size={14} />
           </a>
           <a
-            className="hero-link-writing"
+            href="https://www.linkedin.com/in/ashna-khetan/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn <ArrowUpRight size={14} />
+          </a>
+          <a
             href="https://ashnak03.substack.com/"
             target="_blank"
             rel="noreferrer"
           >
-            writing
+            Writing <ArrowUpRight size={14} />
           </a>
         </div>
       </div>
-      <div className="hero-media">
-        <div className="profile-frame">
-          <img
-            className="profile_pic"
-            src={profilePhoto}
-            alt="Ashna at graduation"
-          />
-          <div className="profile-caption">
-            <p>💭 currently musing about robot evals & agentic data collection</p>
-            <a
-              className="profile-caption-link"
-              href="https://x.com/ashna_khetan"
-              target="_blank"
-              rel="noreferrer"
-            >
-              let's talk
-            </a>
-          </div>
-        </div>
-        <div className="question-wrap">
-          <QuestionCard />
-        </div>
+      <figure className="portrait">
+        <img
+          src={profilePhoto}
+          alt="Ashna Khetan at her Stanford graduation"
+          width="2420"
+          height="3024"
+        />
+        <figcaption>Stanford University</figcaption>
+      </figure>
+    </div>
+    <div className="research-focus" aria-label="Research interests">
+      <div>
+        <span className="focus-index">01</span>
+        <h2>World models</h2>
+        <p>Physical understanding &amp; generation</p>
+      </div>
+      <div>
+        <span className="focus-index">02</span>
+        <h2>Robot evaluation</h2>
+        <p>Measuring embodied intelligence</p>
+      </div>
+      <div>
+        <span className="focus-index">03</span>
+        <h2>Agentic data collection</h2>
+        <p>Data for learning &amp; interaction</p>
       </div>
     </div>
-  );
-};
+  </>
+);
 
 export default Intro;
