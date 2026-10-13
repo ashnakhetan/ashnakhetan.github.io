@@ -1,9 +1,9 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import EmailCopy from "../components/EmailCopy";
-import profilePhoto from "../assets/profile-240.webp";
-import profilePhoto480 from "../assets/profile-480.webp";
-import profilePhoto720 from "../assets/profile-720.webp";
+import profilePhoto from "../assets/profile-stanford-full-240.webp";
+import profilePhoto480 from "../assets/profile-stanford-full-480.webp";
+import profilePhoto720 from "../assets/profile-stanford-full-720.webp";
 
 const Intro = () => (
   <>
@@ -14,8 +14,8 @@ const Intro = () => (
           AI Engineer <span aria-hidden="true">/</span> NVIDIA
         </p>
         <p className="intro-lede">
-          I work on world models, robotics, and agents, with a focus on how
-          intelligent systems understand and interact with the physical world.
+          I work on world models and robotics, with a focus on agentic systems
+          that learn from the physical world.
         </p>
         <p className="intro-bio">
           At{" "}
@@ -77,30 +77,13 @@ const Intro = () => (
           sizes="(max-width: 520px) 96px, (max-width: 700px) 150px, (max-width: 900px) 190px, 224px"
           alt="Ashna Khetan at her Stanford graduation"
           width="240"
-          height="300"
+          height="360"
           fetchpriority="high"
           loading="eager"
           decoding="async"
         />
         <figcaption>Stanford University</figcaption>
       </figure>
-    </div>
-    <div className="research-focus" aria-label="Research interests">
-      <div>
-        <span className="focus-index">01</span>
-        <h2>World models</h2>
-        <p>Physical understanding &amp; generation</p>
-      </div>
-      <div>
-        <span className="focus-index">02</span>
-        <h2>Robot evaluation</h2>
-        <p>Measuring embodied intelligence</p>
-      </div>
-      <div>
-        <span className="focus-index">03</span>
-        <h2>Conversational AI</h2>
-        <p>Grounding &amp; human-AI interaction</p>
-      </div>
     </div>
   </>
 );

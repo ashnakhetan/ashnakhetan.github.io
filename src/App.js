@@ -146,9 +146,6 @@ function App() {
             <AgentMode />
           </div>
         </div>
-        <p className="footer-note">
-          World models, robotics, and agentic systems
-        </p>
       </footer>
     </div>
   );

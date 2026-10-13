@@ -6,3 +6,11 @@ test("renders portfolio content", () => {
   const projectsHeading = screen.getByRole("heading", { name: /projects/i });
   expect(projectsHeading).toBeInTheDocument();
 });
+
+test("renders the intro and publications without a research-interests bar", () => {
+  render(<App />);
+
+  expect(screen.queryByLabelText("Research interests")).not.toBeInTheDocument();
+  expect(screen.getByRole("region", { name: "Ashna Khetan" })).toBeInTheDocument();
+  expect(screen.getByRole("region", { name: "Publications" })).toBeInTheDocument();
+});

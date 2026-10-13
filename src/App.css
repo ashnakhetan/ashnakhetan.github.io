@@ -194,8 +194,6 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
   border-radius: 3px;
 }
 .portrait figcaption {
@@ -204,34 +202,6 @@ h1 {
   font-size: 11px;
   text-align: right;
 }
-.research-focus {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
-  margin-top: 50px;
-  padding: 25px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.focus-index {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 10px;
-}
-.research-focus h2 {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-}
-.research-focus p {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.6;
-}
-
 .section-block {
   padding-top: 58px;
 }
@@ -544,11 +514,6 @@ h1 {
 .footer-links a:hover {
   color: var(--accent);
 }
-.footer-note {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 11px;
-}
 .agent-mode-trigger {
   padding: 6px 0;
   border: 0;
@@ -674,16 +639,6 @@ h1 {
   .intro-bio {
     font-size: 14px;
   }
-  .research-focus {
-    gap: 20px;
-    margin-top: 35px;
-  }
-  .research-focus h2 {
-    font-size: 13px;
-  }
-  .research-focus p {
-    font-size: 11px;
-  }
   .publication,
   .experience-row,
   .project-row {
@@ -765,27 +720,6 @@ h1 {
   }
   .intro-links {
     gap: 20px;
-  }
-  .research-focus {
-    grid-template-columns: 1fr;
-    gap: 17px;
-    padding: 21px 0;
-  }
-  .research-focus > div {
-    display: grid;
-    grid-template-columns: 24px minmax(0, 1fr);
-    column-gap: 12px;
-  }
-  .focus-index {
-    grid-row: span 2;
-    margin: 3px 0 0;
-  }
-  .research-focus h2 {
-    font-size: 13px;
-  }
-  .research-focus p {
-    margin-top: 2px;
-    font-size: 11px;
   }
   .section-block {
     padding-top: 42px;
