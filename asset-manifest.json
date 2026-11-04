@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.29bd9d59.css",
-    "main.js": "/static/js/main.700a4eb7.js",
+    "main.css": "/static/css/main.9c63fffb.css",
+    "main.js": "/static/js/main.6c153213.js",
     "static/js/787.f1c872b9.chunk.js": "/static/js/787.f1c872b9.chunk.js",
     "static/media/PlastiClass.png": "/static/media/PlastiClass.ce2c50c2346fa174830b.png",
     "static/media/Rehearsal.png": "/static/media/Rehearsal.983c46b6ccc78ba16aba.png",
@@ -17,16 +17,17 @@
     "static/media/saveFace.jpg": "/static/media/saveFace.63975d7d0ac9a7dc0cae.jpg",
     "static/media/cosmos3-figure.webp": "/static/media/cosmos3-figure.8dd38529e16e8e3319bf.webp",
     "static/media/math-visual-aids-figure.webp": "/static/media/math-visual-aids-figure.c6fdd53e7f8d180ef98f.webp",
+    "static/media/astranomy-figure.webp": "/static/media/astranomy-figure.34dd3604098779771614.webp",
     "static/media/profile-stanford-full-240.webp": "/static/media/profile-stanford-full-240.a6db55ec34f7c83a6d04.webp",
     "static/media/aggrevision.svg": "/static/media/aggrevision.f12fd3288471a6d865dbba203cad1404.svg",
     "static/media/politicsbench.svg": "/static/media/politicsbench.4a24243dfbcc55a4461cddb3a41ce27a.svg",
     "index.html": "/index.html",
-    "main.29bd9d59.css.map": "/static/css/main.29bd9d59.css.map",
-    "main.700a4eb7.js.map": "/static/js/main.700a4eb7.js.map",
+    "main.9c63fffb.css.map": "/static/css/main.9c63fffb.css.map",
+    "main.6c153213.js.map": "/static/js/main.6c153213.js.map",
     "787.f1c872b9.chunk.js.map": "/static/js/787.f1c872b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29bd9d59.css",
-    "static/js/main.700a4eb7.js"
+    "static/css/main.9c63fffb.css",
+    "static/js/main.6c153213.js"
   ]
 }
