@@ -10,7 +10,10 @@ const Research = () => (
     </div>
     <div className="publication-list">
       {publications.map((publication) => (
-        <article className="publication" key={publication.paperUrl}>
+        <article
+          className="publication"
+          key={publication.paperUrl || publication.projectUrl}
+        >
           <div className="publication-image">
             <img
               src={publication.imageUrl}
@@ -26,7 +29,11 @@ const Research = () => (
               <span className="publication-year">{publication.year}</span>
             </div>
             <h3>
-              <a href={publication.paperUrl} target="_blank" rel="noreferrer">
+              <a
+                href={publication.paperUrl || publication.projectUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {publication.title}
               </a>
             </h3>
@@ -45,14 +52,16 @@ const Research = () => (
             </p>
             <p className="publication-description">{publication.description}</p>
             <div className="publication-links">
-              <a
-                className="paper-link"
-                href={publication.paperUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FileText size={14} /> Paper <ArrowUpRight size={14} />
-              </a>
+              {publication.paperUrl && (
+                <a
+                  className="paper-link"
+                  href={publication.paperUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FileText size={14} /> Paper <ArrowUpRight size={14} />
+                </a>
+              )}
               {publication.projectUrl && (
                 <a
                   className="paper-link"

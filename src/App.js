@@ -20,27 +20,6 @@ function App() {
       <a className="skip-link" href="#about">
         Skip to content
       </a>
-      <header className="site-header">
-        <div className="header-inner">
-          <a className="brand-mark" href="#about">
-            Ashna Khetan
-          </a>
-          <nav className="site-nav" aria-label="Main navigation">
-            <a href="#research">Research</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a
-              href="https://ashnak03.substack.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Writing
-            </a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-      </header>
-
       <main id="main-content">
         <section
           id="about"

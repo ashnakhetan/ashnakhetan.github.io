@@ -2,9 +2,23 @@ import politicsBenchFigure from "../assets/politicsbench-figure.png";
 import groundingFigure from "../assets/grounding-gaps-figure.png";
 import cosmosFigure from "../assets/cosmos3-figure.webp";
 import mathVisualAidsFigure from "../assets/math-visual-aids-figure.webp";
+import astranomyFigure from "../assets/astranomy-figure.webp";
 
-// Team reports use a compact contributor line; other author lists follow arXiv.
+// Team reports use a compact contributor line; other author lists follow the publication.
 const publications = [
+  {
+    title:
+      "Astranomy: An empirical study of GPT-6 Astra as a native robot policy",
+    authors: ["Jenai Xuning Yang", "Ashna Khetan", "Shun Zhang"],
+    year: "2026",
+    venue: "NVIDIA Technical Report",
+    description:
+      "Evaluating general-purpose multimodal models as robot policies, comparing direct control, agentic execution, and policy orchestration",
+    imageUrl: astranomyFigure,
+    imageAlt:
+      "Astranomy results comparing robot policy success rates and completion scores on RoboLab-120",
+    projectUrl: "https://research.nvidia.com/labs/srl/projects/astranomy/",
+  },
   {
     title: "Cosmos 3: Omnimodal World Models for Physical AI",
     authorGroup: "NVIDIA Cosmos Team",
