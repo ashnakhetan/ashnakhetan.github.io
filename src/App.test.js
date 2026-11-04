@@ -7,27 +7,26 @@ test("renders portfolio content", () => {
   expect(projectsHeading).toBeInTheDocument();
 });
 
-test("keeps section navigation in the intro without a separate header", () => {
+test("keeps the original header navigation", () => {
   render(<App />);
 
-  expect(screen.queryByRole("banner")).not.toBeInTheDocument();
-  const intro = within(screen.getByRole("region", { name: "Ashna Khetan" }));
   const navigation = within(
-    intro.getByRole("navigation", { name: "Main navigation" }),
+    within(screen.getByRole("banner")).getByRole("navigation", {
+      name: "Main navigation",
+    }),
   );
-  expect(navigation.getAllByRole("link")).toHaveLength(4);
-  expect(navigation.getByRole("link", { name: "Research" })).toHaveAttribute(
-    "href", "#research",
-  );
-  expect(navigation.getByRole("link", { name: "Experience" })).toHaveAttribute(
-    "href", "#experience",
-  );
-  expect(navigation.getByRole("link", { name: "Projects" })).toHaveAttribute(
-    "href", "#projects",
-  );
-  expect(navigation.getByRole("link", { name: "Contact" })).toHaveAttribute(
-    "href", "#contact",
-  );
+  expect(
+    navigation.getAllByRole("link").map((link) => ({
+      text: link.textContent,
+      href: link.getAttribute("href"),
+    })),
+  ).toEqual([
+    { text: "Research", href: "#research" },
+    { text: "Experience", href: "#experience" },
+    { text: "Projects", href: "#projects" },
+    { text: "Writing", href: "https://ashnak03.substack.com/" },
+    { text: "Contact", href: "#contact" },
+  ]);
 });
 
 test("renders the intro and publications without a research-interests bar", () => {

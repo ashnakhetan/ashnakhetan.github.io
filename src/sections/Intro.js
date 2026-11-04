@@ -9,12 +9,10 @@ const Intro = () => (
   <>
     <div className="intro-grid">
       <div className="intro-copy">
-        <div className="intro-heading">
-          <h1 id="intro-title">Ashna Khetan</h1>
-          <p className="intro-role">
-            AI Engineer <span aria-hidden="true">/</span> NVIDIA
-          </p>
-        </div>
+        <h1 id="intro-title">Ashna Khetan</h1>
+        <p className="intro-role">
+          AI Engineer <span aria-hidden="true">/</span> NVIDIA
+        </p>
         <p className="intro-lede">
           I work on world models and robotics, with a focus on agentic systems
           that learn from the physical world.
@@ -71,18 +69,12 @@ const Intro = () => (
             Writing <ArrowUpRight size={14} />
           </a>
         </div>
-        <nav className="site-nav" aria-label="Main navigation">
-          <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
       </div>
       <figure className="portrait">
         <img
           src={profilePhoto}
           srcSet={`${profilePhoto} 240w, ${profilePhoto480} 480w, ${profilePhoto720} 720w`}
-          sizes="(max-width: 520px) 96px, (max-width: 700px) 140px, 180px"
+          sizes="(max-width: 520px) 96px, (max-width: 700px) 150px, (max-width: 900px) 190px, 224px"
           alt="Ashna Khetan at her Stanford graduation"
           width="240"
           height="360"
