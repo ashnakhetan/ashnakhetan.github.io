@@ -66,7 +66,9 @@ test("shows Astranomy first with project links and preserves existing paper link
   expect(astranomy.getByText(/Jenai Xuning Yang/)).toHaveTextContent(
     /^Jenai Xuning Yang, Ashna Khetan, Shun Zhang$/,
   );
-  expect(astranomy.getByText("NVIDIA Technical Report")).toBeInTheDocument();
+  expect(
+    astranomy.getByText("CoRL 2026 Late Breaking Results"),
+  ).toBeInTheDocument();
   expect(astranomy.getByText("2026")).toBeInTheDocument();
 
   const cosmos = within(articles[1]);

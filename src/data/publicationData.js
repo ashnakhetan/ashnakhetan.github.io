@@ -11,7 +11,7 @@ const publications = [
       "Astranomy: An empirical study of GPT-6 Astra as a native robot policy",
     authors: ["Jenai Xuning Yang", "Ashna Khetan", "Shun Zhang"],
     year: "2026",
-    venue: "NVIDIA Technical Report",
+    venue: "CoRL 2026 Late Breaking Results",
     description:
       "Evaluating general-purpose multimodal models as robot policies, comparing direct control, agentic execution, and policy orchestration",
     imageUrl: astranomyFigure,
